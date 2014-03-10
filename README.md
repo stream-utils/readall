@@ -9,6 +9,8 @@ readall
 
 readall `Stream` datas helper.
 
+Code Coverage: [100%](http://qtestbucket.qiniudn.com/cov/html/readall/0.0.1/index.html)
+
 ## Install
 
 ```bash
