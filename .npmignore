@@ -6,3 +6,4 @@ logo.png
 .jshintignore
 .jshintrc
 .gitingore
+coverage/
