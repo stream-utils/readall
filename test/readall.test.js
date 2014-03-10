@@ -49,6 +49,25 @@ describe('readall.test.js', function () {
     });
   });
 
+  it('should read http response stream fail when req.abort()', function (done) {
+    var req = http.get('http://r.cnpmjs.org/npm', function (res) {
+      setTimeout(function () {
+        req.abort();
+      }, 1);
+      var aborted = false;
+      res.on('aborted', function () {
+        // console.log('req aborted');
+        aborted = true;
+      });
+      readall(res, function (err, data) {
+        should.not.exist(err);
+        data.should.be.a.Buffer;
+        aborted.should.equal(true);
+        done();
+      });
+    });
+  });
+
   it('should mock stream error', function (done) {
     var stream = new EventEmitter();
     stream.read = function () {
