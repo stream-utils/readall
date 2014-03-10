@@ -19,6 +19,7 @@
     "contributors": "*",
     "cov": "*",
     "istanbul": "*",
+    "jshint": "*",
     "mocha": "*",
     "should": "3.1.3"
   },

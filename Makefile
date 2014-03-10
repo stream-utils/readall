@@ -7,7 +7,7 @@ install:
 	@npm install --registry=http://r.cnpmjs.org --disturl=http://dist.cnpmjs.org
 
 jshint:
-	@./node_modules/./bin/jshint .
+	@./node_modules/.bin/jshint .
 
 test:
 	@NODE_ENV=test ./node_modules/.bin/mocha \
