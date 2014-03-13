@@ -25,6 +25,11 @@ var readall = require('readall');
 readall(stream, function (err, data) {
   console.log(data.length);
 });
+
+// pipe stream
+readall(stream, outstream, function (err) {
+  console.log(err);
+});
 ```
 
 ## License

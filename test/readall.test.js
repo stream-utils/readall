@@ -30,6 +30,16 @@ describe('readall.test.js', function () {
     });
   });
 
+  it('should pipe file stream success', function (done) {
+    readall(fs.createReadStream(__filename), fs.createWriteStream(__filename + '.out'),
+    function (err, data) {
+      should.not.exist(err);
+      should.not.exist(data);
+      fs.statSync(__filename + '.out').size.should.equal(fs.statSync(__filename).size);
+      done();
+    });
+  });
+
   it('should read not file stream error', function (done) {
     readall(fs.createReadStream(__filename + 'notexist'), function (err, data) {
       should.exist(err);
