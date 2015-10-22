@@ -30,6 +30,13 @@ describe('readall.test.js', function () {
     });
   });
 
+  it('should return promise', function () {
+    return readall(fs.createReadStream(__filename)).then(function (data) {
+      data.should.be.a.Buffer;
+      data.should.length(fs.statSync(__filename).size);
+    });
+  });
+
   it('should pipe file stream success', function (done) {
     readall(fs.createReadStream(__filename), fs.createWriteStream(__filename + '.out'),
     function (err, data) {
