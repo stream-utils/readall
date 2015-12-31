@@ -12,7 +12,7 @@
     }
   },
   "dependencies": {
-    "debug": "0.7.4"
+    "debug": "2.2.0"
   },
   "devDependencies": {
     "autod": "*",
@@ -21,7 +21,7 @@
     "istanbul": "*",
     "jshint": "*",
     "mocha": "*",
-    "should": "3.1.3"
+    "should": "8.0.2"
   },
   "homepage": "https://github.com/fengmk2/readall",
   "repository": {
@@ -34,7 +34,10 @@
     "email": "fengmk2@gmail.com"
   },
   "keywords": [
-    "readall", "read", "stream", "stream2"
+    "readall",
+    "read",
+    "stream",
+    "stream2"
   ],
   "engines": {
     "node": ">= 0.12.0"
