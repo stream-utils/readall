@@ -1,15 +1,11 @@
 readall
 =======
 
-[![Build Status](https://secure.travis-ci.org/fengmk2/readall.png)](http://travis-ci.org/fengmk2/readall) [![Dependency Status](https://gemnasium.com/fengmk2/readall.png)](https://gemnasium.com/fengmk2/readall)
+[![Build Status](https://secure.travis-ci.org/stream-utils/readall.png)](http://travis-ci.org/stream-utils/readall)
 
 [![NPM](https://nodei.co/npm/readall.png?downloads=true&stars=true)](https://nodei.co/npm/readall/)
 
-![logo](https://raw.github.com/fengmk2/readall/master/logo.png)
-
 readall `Stream` datas helper.
-
-Code Coverage: [100%](http://qtestbucket.qiniudn.com/cov/html/readall/0.0.1/index.html)
 
 ## Install
 

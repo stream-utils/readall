@@ -1,18 +1,4 @@
-/**!
- * readall - test/readall.test.js
- *
- * Copyright(c) 2014 fengmk2 and other contributors.
- * MIT Licensed
- *
- * Authors:
- *   fengmk2 <fengmk2@gmail.com> (http://fengmk2.github.com)
- */
-
-"use strict";
-
-/**
- * Module dependencies.
- */
+'use strict';
 
 var fs = require('fs');
 var http = require('http');
@@ -50,7 +36,7 @@ describe('readall.test.js', function () {
   it('should read not file stream error', function (done) {
     readall(fs.createReadStream(__filename + 'notexist'), function (err, data) {
       should.exist(err);
-      err.message.should.include('ENOENT');
+      err.message.should.containEql('ENOENT');
       should.not.exist(data);
       done();
     });
